@@ -13,6 +13,8 @@ import android.widget.RadioButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.Arrays;
+
 public class MainActivity extends AppCompatActivity {
 
     private Button bot;
@@ -21,22 +23,30 @@ public class MainActivity extends AppCompatActivity {
     String[] cedulas = {"3-752-1461","8-964-691"};
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         bot = findViewById(R.id.boton1);
-        cedulaing =findViewById(R.id.tx1);
+        tx1 =findViewById(R.id.tx1);
 
         bot.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                if (cedulaing==)
+                String cedulaing = tx1.getText().toString();
+
+                if (Arrays.asList(cedulas).contains(cedulaing)) {
                 Intent intent = new Intent(getApplicationContext(), MainActivity2.class);
                 startActivity(intent);
 
             }
-        });
+
+                else {
+                    Toast.makeText(getApplicationContext(),"Su cédula no se encuentra en el sistema ingrese otra nuevamente ",Toast.LENGTH_SHORT).show();
+                }
+        }});
     }
-}
+    }
+
