@@ -12,7 +12,6 @@ public class MainActivity2 extends AppCompatActivity {
 
      Button bot;
      TextView text2;
-     String[] cedulas = {"3-752-1461","8-964-691"};
      int i=0;
 
     @Override
@@ -25,9 +24,10 @@ public class MainActivity2 extends AppCompatActivity {
         bot.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Intent intent = getIntent();
+                String ced= intent.getStringExtra("Cedula");
 
-
-                text2.setText("Cedula: " + cedulas[0]);
+                text2.setText(ced);
             }
         });
     }
