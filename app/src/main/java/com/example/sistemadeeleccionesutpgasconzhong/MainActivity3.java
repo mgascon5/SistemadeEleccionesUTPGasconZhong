@@ -9,6 +9,10 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.text.DecimalFormat;
+import java.text.NumberFormat;
+import java.util.Arrays;
+
 public class MainActivity3 extends AppCompatActivity {
 
     TextView can,can2,can3,prc,prc2,prc3;
@@ -32,6 +36,9 @@ public class MainActivity3 extends AppCompatActivity {
 
         String ced= in2.getStringExtra("Cedula");
         String cand= in2.getStringExtra("Candi");
+
+
+
 
 
         if (cand.equals("omar")){
@@ -64,15 +71,18 @@ public class MainActivity3 extends AppCompatActivity {
         Datos.porcentaje2=(((float)Datos.vivianv/(float)Datos.tot)*100);
         Datos.porcentaje3=(((float)Datos.martinv/(float)Datos.tot)*100);
 
+        NumberFormat formatter = new DecimalFormat("#0.00");
 
-
-        prc.setText("Porcentaje de votos: "+  Datos.porcentaje1 +"%");
-        prc2.setText("Porcentaje de votos: "+  Datos.porcentaje2+"%");
-        prc3.setText("Porcentaje de votos: "+  Datos.porcentaje3+"%");
+        prc.setText("Porcentaje de votos: "+  formatter.format(Datos.porcentaje1) +"%");
+        prc2.setText("Porcentaje de votos: "+  formatter.format(Datos.porcentaje2)+"%");
+        prc3.setText("Porcentaje de votos: "+  formatter.format(Datos.porcentaje3)+"%");
 
         botonv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                int x=Arrays.asList(Datos.cedulas).indexOf(ced);
+                Datos.cedulas[x]=" ";
 
                 Intent inP = new Intent(getApplicationContext(), MainActivity.class);
                 inP.putExtra("Cedula", ced);
