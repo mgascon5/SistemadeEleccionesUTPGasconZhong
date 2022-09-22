@@ -68,8 +68,8 @@
 
     <TextView
         android:id="@+id/prc"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="171dp"
+        android:layout_height="27dp"
         android:layout_marginStart="194dp"
         android:layout_marginTop="112dp"
         android:text="Porcentaje de votos:"
@@ -78,8 +78,8 @@
 
     <TextView
         android:id="@+id/prc2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="173dp"
+        android:layout_height="31dp"
         android:layout_marginStart="194dp"
         android:layout_marginTop="304dp"
         android:text="Porcentaje de votos:"
@@ -88,8 +88,8 @@
 
     <TextView
         android:id="@+id/prc3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="183dp"
+        android:layout_height="28dp"
         android:layout_marginStart="194dp"
         android:layout_marginTop="447dp"
         android:text="Porcentaje de votos:"

@@ -13,8 +13,7 @@ public class MainActivity3 extends AppCompatActivity {
 
     TextView can,can2,can3,prc,prc2,prc3;
     Button botonv;
-    int omarv,vivanv,martinv,tot;
-    int porcentaje1,porcentaje2,porcentaje3;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,9 +36,9 @@ public class MainActivity3 extends AppCompatActivity {
 
         if (cand.equals("omar")){
 
-            omarv=omarv+1;
+            Datos.omarv=Datos.omarv+1;
 
-            tot=+1;
+            Datos.tot=Datos.tot +1;
 
 
 
@@ -47,27 +46,29 @@ public class MainActivity3 extends AppCompatActivity {
 
         else if (cand.equals("vivian")){
 
-            vivanv=vivanv + 1;
+            Datos.vivianv= Datos.vivianv+ 1;
 
-            tot=+1;
+            Datos.tot=Datos.tot +1;
 
 
         }
 
         else {
-            martinv =martinv + 1;
+            Datos.martinv= Datos.martinv+ 1;
 
-            tot=+1;
+            Datos.tot=Datos.tot +1;
 
         }
 
-        porcentaje1=omarv/tot;
-        porcentaje2=vivanv/tot;
-        porcentaje3=martinv/tot;
+        Datos.porcentaje1=(((float)Datos.omarv/(float)Datos.tot)*100);
+        Datos.porcentaje2=(((float)Datos.vivianv/(float)Datos.tot)*100);
+        Datos.porcentaje3=(((float)Datos.martinv/(float)Datos.tot)*100);
 
-        prc.setText("Porcentaje de votos: "+ porcentaje1 +"%");
-        prc2.setText("Porcentaje de votos: "+ porcentaje2+"%");
-        prc3.setText("Porcentaje de votos: "+ porcentaje3+"%");
+
+
+        prc.setText("Porcentaje de votos: "+  Datos.porcentaje1 +"%");
+        prc2.setText("Porcentaje de votos: "+  Datos.porcentaje2+"%");
+        prc3.setText("Porcentaje de votos: "+  Datos.porcentaje3+"%");
 
         botonv.setOnClickListener(new View.OnClickListener() {
             @Override
