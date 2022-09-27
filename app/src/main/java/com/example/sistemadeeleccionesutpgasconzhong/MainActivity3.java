@@ -15,7 +15,7 @@ import java.util.Arrays;
 
 public class MainActivity3 extends AppCompatActivity {
 
-    TextView can,can2,can3,prc,prc2,prc3;
+    TextView can,can2,can3,prc,prc2,prc3, prc4;
     Button botonv;
 
 
@@ -31,6 +31,7 @@ public class MainActivity3 extends AppCompatActivity {
         prc=findViewById(R.id.prc);
         prc2=findViewById(R.id.prc2);
         prc3=findViewById(R.id.prc3);
+        prc4=findViewById(R.id.prc4);
 
         Intent in2 = getIntent();
 
@@ -60,8 +61,19 @@ public class MainActivity3 extends AppCompatActivity {
 
         }
 
+        else if (cand.equals("martin")){
+
+            Datos.martinv = Datos.martinv+ 1;
+
+            Datos.tot=Datos.tot +1;
+
+
+        }
+
+
+
         else {
-            Datos.martinv= Datos.martinv+ 1;
+            Datos.nulo= Datos.nulo+ 1;
 
             Datos.tot=Datos.tot +1;
 
@@ -70,12 +82,15 @@ public class MainActivity3 extends AppCompatActivity {
         Datos.porcentaje1=(((float)Datos.omarv/(float)Datos.tot)*100);
         Datos.porcentaje2=(((float)Datos.vivianv/(float)Datos.tot)*100);
         Datos.porcentaje3=(((float)Datos.martinv/(float)Datos.tot)*100);
+        Datos.porcentaje4=(((float)Datos.nulo/(float)Datos.tot)*100);
 
         NumberFormat formatter = new DecimalFormat("#0.00");
 
         prc.setText("Porcentaje de votos: "+  formatter.format(Datos.porcentaje1) +"%");
         prc2.setText("Porcentaje de votos: "+  formatter.format(Datos.porcentaje2)+"%");
         prc3.setText("Porcentaje de votos: "+  formatter.format(Datos.porcentaje3)+"%");
+        prc4.setText("Porcentaje de votos: "+  formatter.format(Datos.porcentaje4)+"%");
+
 
         botonv.setOnClickListener(new View.OnClickListener() {
             @Override

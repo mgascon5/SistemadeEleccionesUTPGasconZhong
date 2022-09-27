@@ -8,8 +8,8 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="155dp"
-        android:layout_height="130dp"
+        android:layout_width="133dp"
+        android:layout_height="88dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="64dp"
         app:layout_constraintStart_toStartOf="parent"
@@ -18,20 +18,20 @@
 
     <ImageView
         android:id="@+id/imageView5"
-        android:layout_width="143dp"
-        android:layout_height="258dp"
-        android:layout_marginStart="19dp"
-        android:layout_marginTop="172dp"
+        android:layout_width="108dp"
+        android:layout_height="97dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="184dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/vivian" />
 
     <ImageView
         android:id="@+id/imageView6"
-        android:layout_width="152dp"
-        android:layout_height="205dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="396dp"
+        android:layout_width="110dp"
+        android:layout_height="108dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="348dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/martin" />
@@ -50,8 +50,8 @@
         android:id="@+id/can2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="36dp"
-        android:layout_marginTop="204dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="160dp"
         android:text="Vivían Valenzuela"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -60,18 +60,28 @@
         android:id="@+id/can3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="36dp"
-        android:layout_marginTop="384dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="316dp"
         android:text="Martín Candanedo"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
+        android:id="@+id/can4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="488dp"
+        android:text="Nulo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
         android:id="@+id/prc"
-        android:layout_width="185dp"
-        android:layout_height="49dp"
-        android:layout_marginStart="194dp"
-        android:layout_marginTop="112dp"
+        android:layout_width="202dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="176dp"
+        android:layout_marginTop="108dp"
         android:text="Porcentaje de votos:"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -80,8 +90,8 @@
         android:id="@+id/prc2"
         android:layout_width="202dp"
         android:layout_height="44dp"
-        android:layout_marginStart="194dp"
-        android:layout_marginTop="304dp"
+        android:layout_marginStart="176dp"
+        android:layout_marginTop="224dp"
         android:text="Porcentaje de votos:"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -90,8 +100,18 @@
         android:id="@+id/prc3"
         android:layout_width="201dp"
         android:layout_height="56dp"
-        android:layout_marginStart="194dp"
-        android:layout_marginTop="447dp"
+        android:layout_marginStart="176dp"
+        android:layout_marginTop="364dp"
+        android:text="Porcentaje de votos:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/prc4"
+        android:layout_width="201dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="176dp"
+        android:layout_marginTop="472dp"
         android:text="Porcentaje de votos:"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -100,8 +120,8 @@
         android:id="@+id/botonv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="223dp"
-        android:layout_marginTop="530dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="536dp"
         android:text="Volver"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -111,9 +131,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="124dp"
+        android:layout_marginTop="5dp"
         android:text="Votos Escrutados"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="5dp" />
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -15,7 +15,7 @@ import android.widget.Toast;
 public class MainActivity2 extends AppCompatActivity {
 
      Button bot;
-     RadioButton show,show1,show2;
+     RadioButton show,show1,show2, show3;
      ImageView img1;
      String candidato;
 
@@ -27,6 +27,7 @@ public class MainActivity2 extends AppCompatActivity {
         show = findViewById(R.id.radioButton);
         show1 = findViewById(R.id.radioButton2);
         show2= findViewById(R.id.radioButton3);
+        show3 = findViewById(R.id.radioButton4);
         img1= findViewById(R.id.imageView2);
 
         // on click on show text images toast will be shown
@@ -70,7 +71,27 @@ public class MainActivity2 extends AppCompatActivity {
 
 
 
+
+
         });
+
+        show3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                img1.setImageResource(R.drawable.nulo);
+                candidato="nulo";
+
+
+            }
+
+
+
+
+
+        });
+
+
 
         bot.setOnClickListener(new View.OnClickListener() {
             @Override
